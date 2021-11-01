@@ -1,0 +1,140 @@
+#menu-bar{
+    display: none;
+}
+
+header label{
+    float: right;
+    font-size: 2.8rem;
+    margin: 0.6rem 0;
+    cursor: pointer;
+
+    transition: all 0.5s;
+    transform:rotate(0deg);
+}
+
+header input{
+    border: 0;
+    width: 15rem;
+    height: 2rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    border-radius: 0.2rem;
+    padding: 00.3rem;
+}
+
+header input::placeholder{
+    background-image: url(../font/Search\ Icon.png);
+    background-size: 1.4rem 1.4rem;
+    background-repeat: no-repeat;
+    background-position: left center;
+    font-family:'Josefin Sans', sans-serif;
+
+}
+
+header input:focus{
+    outline: none;
+    
+}
+
+.menu{
+    position: absolute;
+    top: 4.2rem;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(51, 51, 51, 0.9);
+    transition: all 0.5s;
+    transform: translate(-100%);
+}
+
+.menu a{
+    display: block;
+    color: white;
+    height: 5rem;
+    text-decoration: none;
+    padding: 1.5rem;
+    border-bottom: 0.1rem solid rgba(255, 255, 255, 0.5);
+    font-size: 2rem;
+    
+}
+
+.menu a:hover{
+    background-color:rgba(255, 255, 255, 0.3);
+}
+
+#menu-bar:checked ~ .menu{
+    transform: translate(0%);
+}
+
+#menu-bar:checked ~ label{
+    transform: rotate(90deg);
+}
+
+@media (max-width:400px){
+
+    header input{
+        display: none;
+    }
+
+    
+}
+
+@media (max-width:400px){
+    
+    header input{
+        width: 60%;
+    }
+    
+}
+
+@media (min-width:568px){
+    
+    header input{
+        width: 50%;
+    }
+
+    header input:active{
+        height: 4.2rem;
+        
+    }
+
+}
+
+@media (min-width:540px){
+
+    header input{
+        width: 50%;
+    }
+
+}
+
+@media (min-width:1024px){
+
+    .menu{
+        position: static;
+        width: auto;
+        height: auto;
+        transform: translate(0%);
+        float: right;
+        display: flex;
+    }
+
+    .menu a{
+        border: none;
+        height: 4rem;
+    }
+
+    header label{
+        display: none;
+    }
+
+    header input{
+        border: 0;
+        width: 42rem;
+        height: 2rem;
+        margin-top: 1.3rem;
+        margin-left: 4rem;
+    }
+
+}
+
